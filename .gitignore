@@ -4,3 +4,5 @@ __pycache__/
 .streamlit/secrets.toml
 .DS_Store
 check_deps.py
+docs/node_modules/
+docs/package-lock.json
