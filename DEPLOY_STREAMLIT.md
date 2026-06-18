@@ -1,28 +1,42 @@
 # Deploy FGMD to Streamlit Community Cloud
 
-Yes — **Streamlit Cloud must be connected to your GitHub repo** to deploy. Local `localhost:8501` only runs on your PC.
+`localhost:8501` is **local only**. For a public URL you must deploy via **Streamlit Community Cloud** connected to GitHub.
 
-## One-click deploy (after GitHub login)
+> **Do NOT use** `https://github.com/apps/streamlit` — that page returns 404.  
+> GitHub authorization happens **inside** share.streamlit.io after you sign in.
 
-Open this link while signed into [share.streamlit.io](https://share.streamlit.io):
+## Step-by-step (correct flow)
 
-**https://share.streamlit.io/deploy?repository=seunghoobang-prog/fgmd&branch=main&mainModule=app.py**
+### 1. Sign in
 
-## Manual steps
+Open: **https://share.streamlit.io**
 
-1. Go to https://share.streamlit.io and sign in with **GitHub** (`seunghoobang-prog`).
-2. Click **Connect GitHub account** → **Authorize streamlit**.
-3. Click **Create app** → **Yup, I have an app**.
-4. Set:
-   - **Repository:** `seunghoobang-prog/fgmd`
-   - **Branch:** `main`
-   - **Main file path:** `app.py`
-   - **App URL (optional):** `fgmd` → `https://fgmd.streamlit.app`
-5. Click **Deploy**.
+Click **Continue to sign-in** → **Continue with GitHub** → log in as `seunghoobang-prog`.
 
-## SMTP secrets (for ORDER email)
+### 2. Connect GitHub (required)
 
-In the app → **Settings** → **Secrets**, paste:
+1. Top-left: click **Workspaces** (warning icon).
+2. Click **Connect GitHub account**.
+3. GitHub opens → click **Authorize streamlit**.
+
+### 3. Deploy your repo
+
+1. Top-right: click **Create app**.
+2. Choose **Yup, I have an app**.
+3. Fill in manually:
+
+| Field | Value |
+|-------|-------|
+| Repository | `seunghoobang-prog/fgmd` |
+| Branch | `main` |
+| Main file path | `app.py` |
+| App URL (optional) | `fgmd` |
+
+4. Click **Deploy!** Wait 2–5 minutes.
+
+### 4. SMTP secrets (for ORDER email)
+
+App → **Settings** (⚙) → **Secrets**:
 
 ```toml
 [smtp]
@@ -37,6 +51,9 @@ use_tls = true
 
 ## Expected live URL
 
-After deploy: **https://fgmd.streamlit.app** (if subdomain `fgmd` is available)
+- `https://fgmd.streamlit.app` (if subdomain `fgmd` is free)
+- Or auto-generated: `https://seunghoobang-prog-fgmd-app-xxxxx.streamlit.app`
 
-Or auto-generated: `https://seunghoobang-prog-fgmd-app-xxxxx.streamlit.app`
+## Repo (already ready)
+
+https://github.com/seunghoobang-prog/fgmd

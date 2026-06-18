@@ -17,13 +17,11 @@ Open http://localhost:8501
 
 ## Deploy to Streamlit Cloud (public URL)
 
-1. Sign in at [share.streamlit.io](https://share.streamlit.io) with GitHub.
-2. Click **Connect GitHub account** → **Authorize streamlit**.
-3. Use this deploy link (repo is already on GitHub):
-
-**https://share.streamlit.io/deploy?repository=seunghoobang-prog/fgmd&branch=main&mainModule=app.py**
-
-4. Set app subdomain to `fgmd` if available → live at `https://fgmd.streamlit.app`
+1. Open **[share.streamlit.io](https://share.streamlit.io)** → sign in with GitHub.
+2. **Workspaces** → **Connect GitHub account** → **Authorize streamlit**.
+   - Do **not** use `github.com/apps/streamlit` (404). Auth happens inside Streamlit.
+3. **Create app** → **Yup, I have an app** → set repo `seunghoobang-prog/fgmd`, branch `main`, file `app.py`.
+4. Optional subdomain `fgmd` → `https://fgmd.streamlit.app`
 5. Add SMTP secrets in app Settings (see [DEPLOY_STREAMLIT.md](DEPLOY_STREAMLIT.md)).
 
 ## Docs (development plan)
