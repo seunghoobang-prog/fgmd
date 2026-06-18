@@ -37,7 +37,7 @@ export default function PlanPage() {
             <span className="rounded-full bg-slate-200 px-3 py-1">예상 사용자 830명</span>
             <span className="rounded-full bg-slate-200 px-3 py-1">동시 접속 100명 미만</span>
           </div>
-          <p className="mt-4 text-sm text-slate-500">작성일: 2026년 6월 18일</p>
+          <p className="mt-4 text-sm text-slate-500">작성일: 2026년 6월 18일 · v1.1 (하네스 원칙 반영)</p>
         </div>
       </header>
 
@@ -45,6 +45,7 @@ export default function PlanPage() {
         <nav className="rounded-xl border border-slate-200 bg-slate-50 p-4">
           <p className="mb-2 font-semibold text-slate-800">목차</p>
           <ol className="list-decimal space-y-1 pl-5 text-slate-600">
+            <li><a href="#s0" className="hover:text-slate-900">프로젝트 규칙 (하네스 원칙)</a></li>
             <li><a href="#s1" className="hover:text-slate-900">기능명세서</a></li>
             <li><a href="#s2" className="hover:text-slate-900">ERD</a></li>
             <li><a href="#s3" className="hover:text-slate-900">API 스펙</a></li>
@@ -53,6 +54,80 @@ export default function PlanPage() {
             <li><a href="#s6" className="hover:text-slate-900">배포 현황</a></li>
           </ol>
         </nav>
+
+        <Section id="s0" title="0. 프로젝트 규칙 (하네스 원칙)">
+          <div className="mb-6 rounded-xl border border-amber-200 bg-amber-50 p-4 text-slate-800">
+            <p className="font-semibold">CLAUDE.md 기반 개발 운영 원칙</p>
+            <p className="mt-1 text-slate-600">모든 구현·수정 작업은 아래 규칙을 따릅니다.</p>
+          </div>
+
+          <h3 className="mb-2 font-semibold text-slate-800">0.1 작업 원칙</h3>
+          <BulletList items={[
+            "모든 작업은 Phase 단위로 나눠서 진행한다",
+            "각 Phase 완료 후 반드시 검증한다",
+            "에러 발생 시 현재 Phase만 되돌린다 (전체 재시작 금지)",
+          ]} />
+
+          <h3 className="mb-2 mt-6 font-semibold text-slate-800">0.2 검증 기준</h3>
+          <table className="mb-6 w-full border-collapse text-left">
+            <thead>
+              <tr className="bg-slate-100">
+                <th className="border border-slate-200 px-3 py-2">항목</th>
+                <th className="border border-slate-200 px-3 py-2">기준</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium">빌드 성공</td>
+                <td className="border border-slate-200 px-3 py-2"><code className="text-xs">npm run build</code> 에러 없음</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium">UI 확인</td>
+                <td className="border border-slate-200 px-3 py-2">브라우저에서 화면 정상 표시</td>
+              </tr>
+              <tr>
+                <td className="border border-slate-200 px-3 py-2 font-medium">DB 연동</td>
+                <td className="border border-slate-200 px-3 py-2">Supabase 데이터 저장·조회 정상</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 className="mb-2 font-semibold text-slate-800">0.3 실패 시 대응</h3>
+          <BulletList items={[
+            "에러 발생 시 즉시 수정하지 말고, Plan Mode로 전환하여 원인 분석 후 수정 계획을 먼저 세운다",
+            "동일 에러가 3회 이상 반복되면 사용자에게 보고한다",
+          ]} />
+
+          <h3 className="mb-2 mt-6 font-semibold text-slate-800">0.4 개발 Phase 로드맵</h3>
+          <table className="w-full border-collapse text-left">
+            <thead>
+              <tr className="bg-slate-100">
+                <th className="border border-slate-200 px-3 py-2">Phase</th>
+                <th className="border border-slate-200 px-3 py-2">범위</th>
+                <th className="border border-slate-200 px-3 py-2">검증</th>
+                <th className="border border-slate-200 px-3 py-2">상태</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["P1", "Supabase 스키마 + Auth + RLS", "로그인/로그아웃, 역할 분기", "완료"],
+                ["P2", "User 화면 (/items, /apply, /my-applications)", "신청 제출·조회", "완료"],
+                ["P3", "Admin 화면 (대시보드, 재고, 신청, 상품)", "승인/반려·재고 차감", "완료"],
+                ["P4", "Vercel + Supabase 프로덕션 배포", "빌드·환경변수·접속", "완료"],
+                ["P5", "알림·주소 API 등 고도화", "요구 시 Plan 후 진행", "대기"],
+              ].map(([phase, scope, verify, status]) => (
+                <tr key={phase}>
+                  <td className="border border-slate-200 px-3 py-2 font-mono text-xs">{phase}</td>
+                  <td className="border border-slate-200 px-3 py-2">{scope}</td>
+                  <td className="border border-slate-200 px-3 py-2">{verify}</td>
+                  <td className="border border-slate-200 px-3 py-2">
+                    <span className={status === "완료" ? "text-emerald-700" : "text-amber-700"}>{status}</span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </Section>
 
         <Section id="s1" title="1. 기능명세서">
           <h3 className="mb-2 font-semibold text-slate-800">1.1 사용자 역할</h3>
