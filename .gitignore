@@ -6,3 +6,16 @@ __pycache__/
 check_deps.py
 docs/node_modules/
 docs/package-lock.json
+
+# Next.js web app
+web/node_modules/
+web/.next/
+web/.env.local
+web/.env*.local
+
+# Supabase local/temp
+supabase/.temp/
+supabase/.branches/
+
+# IDE
+.vscode/

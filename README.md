@@ -1,6 +1,14 @@
 # FGMD — Funeral Goods Management Dashboard
 
-Streamlit demo app **상조물품현황** for regional funeral-goods inventory and order management.
+상조물품 신청·재고 관리 시스템입니다.
+
+| 앱 | 경로 | 설명 |
+|----|------|------|
+| **Next.js (프로덕션)** | [`web/`](web/) | Supabase Auth + 역할 기반 관리 (Vercel 배포) |
+| **Streamlit (레거시)** | 루트 `app.py` | 지역 재고·주문 데모 |
+
+**프로덕션:** https://web-kappa-murex-11.vercel.app  
+**배포/계정 정보:** [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ## Quick start
 

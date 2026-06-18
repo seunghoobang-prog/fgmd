@@ -1,0 +1,10 @@
+# Supabase project: fgmd (Seoul)
+# Dashboard: https://supabase.com/dashboard/project/huqychyhlflmazowocla
+
+project_id = "huqychyhlflmazowocla"
+
+[api]
+enabled = true
+
+[db]
+major_version = 15

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "c6897b2c-0cf6-4ea7-94e6-7b3acc0da56f",
+    "date": "2026-06-18",
+    "region": "서울",
+    "product_id": "4e91b40c-bcc9-4c6d-ab2b-fcd934125f74",
+    "stock": 120,
+    "incoming": 0,
+    "outgoing": 0,
+    "update_reason": "초기 재고",
+    "updated_by": null,
+    "updated_at": "2026-06-18T13:18:30+09:00"
+  },
+  {
+    "id": "4d45cc5c-8ccc-43fd-b961-e785754d1a04",
+    "date": "2026-06-18",
+    "region": "오산",
+    "product_id": "4e91b40c-bcc9-4c6d-ab2b-fcd934125f74",
+    "stock": 85,
+    "incoming": 0,
+    "outgoing": 0,
+    "update_reason": "초기 재고",
+    "updated_by": null,
+    "updated_at": "2026-06-18T13:18:30+09:00"
+  },
+  {
+    "id": "798ad21b-5e69-490f-9646-69c8ab0a868a",
+    "date": "2026-06-18",
+    "region": "전라",
+    "product_id": "4e91b40c-bcc9-4c6d-ab2b-fcd934125f74",
+    "stock": 200,
+    "incoming": 0,
+    "outgoing": 0,
+    "update_reason": "초기 재고",
+    "updated_by": null,
+    "updated_at": "2026-06-18T13:18:30+09:00"
+  },
+  {
+    "id": "f90227c9-266e-4876-b62a-d7a231b0a826",
+    "date": "2026-06-18",
+    "region": "경상",
+    "product_id": "4e91b40c-bcc9-4c6d-ab2b-fcd934125f74",
+    "stock": 150,
+    "incoming": 0,
+    "outgoing": 0,
+    "update_reason": "초기 재고",
+    "updated_by": null,
+    "updated_at": "2026-06-18T13:18:30+09:00"
+  },
+  {
+    "id": "bfdc1083-3057-488f-bf7c-ad7ecd060f7a",
+    "date": "2026-06-18",
+    "region": "충청",
+    "product_id": "4e91b40c-bcc9-4c6d-ab2b-fcd934125f74",
+    "stock": 95,
+    "incoming": 0,
+    "outgoing": 0,
+    "update_reason": "초기 재고",
+    "updated_by": null,
+    "updated_at": "2026-06-18T13:18:30+09:00"
+  },
+  {
+    "id": "a54c6d39-f6a2-42de-ae08-17d457354ed0",
+    "date": "2026-06-18",
+    "region": "서울",
+    "product_id": "4e91b40c-bcc9-4c6d-ab2b-fcd934125f74",
+    "stock": 119,
+    "incoming": 0,
+    "outgoing": 1,
+    "update_reason": "신청 승인 출고",
+    "updated_by": "admin-local",
+    "updated_at": "2026-06-18T13:18:30+09:00"
+  }
+]

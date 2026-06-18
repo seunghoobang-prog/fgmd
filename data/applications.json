@@ -1,0 +1,17 @@
+[
+  {
+    "id": "a13df489-9b83-4d78-a8df-b8e0c9facc09",
+    "user_id": "user-local",
+    "product_id": "4e91b40c-bcc9-4c6d-ab2b-fcd934125f74",
+    "employee_id": "E1",
+    "employee_name": "T",
+    "region": "서울",
+    "address": "addr",
+    "quantity": 1,
+    "relationship": "배우자",
+    "status": "approved",
+    "approved_by": "admin-local",
+    "approved_at": "2026-06-18T13:18:30+09:00",
+    "created_at": "2026-06-18T13:18:30+09:00"
+  }
+]

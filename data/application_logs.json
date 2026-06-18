@@ -1,0 +1,18 @@
+[
+  {
+    "id": "07415f02-4b2c-4408-979c-1f5f9554f775",
+    "application_id": "a13df489-9b83-4d78-a8df-b8e0c9facc09",
+    "action": "created",
+    "performed_by": "user-local",
+    "comment": "신청서 제출",
+    "created_at": "2026-06-18T13:18:30+09:00"
+  },
+  {
+    "id": "92d00a97-af3a-4c9c-82ff-56d3227866b3",
+    "application_id": "a13df489-9b83-4d78-a8df-b8e0c9facc09",
+    "action": "approved",
+    "performed_by": "admin-local",
+    "comment": "",
+    "created_at": "2026-06-18T13:18:30+09:00"
+  }
+]
